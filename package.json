@@ -1,0 +1,69 @@
+{
+  "name": "egg-umi-react-template",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^6.0.3",
+    "egg": "^2.15.1",
+    "egg-scripts": "^2.11.0",
+    "egg-view-assets": "^1.6.0",
+    "egg-view-nunjucks": "^2.2.0",
+    "eslint-config-umi": "^1.5.0",
+    "eslint-plugin-flowtype": "^4.4.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.3",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-test-renderer": "^16.12.0",
+    "umi": "^2.11.3",
+    "umi-plugin-react": "^1.13.3"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "cz-conventional-changelog": "3.0.2",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^6.6.0",
+    "eslint-config-egg": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-egg-umi-react-template",
+    "stop": "egg-scripts stop --title=egg-server-egg-umi-react-template",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "build": "cross-env APP_ROOT=$PWD/app/web umi build",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
